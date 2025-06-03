@@ -1,3 +1,4 @@
+// project/src/types.ts
 export type Sport = {
   id: string;
   name: string;
@@ -17,6 +18,7 @@ export type Tip = {
   date: Date;
   result?: 'win' | 'loss' | 'pending';
   analysis: string;
+  competition: string; // Added new field
 };
 
 export type PricingTier = {
