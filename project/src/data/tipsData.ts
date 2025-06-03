@@ -1,3 +1,4 @@
+// project/src/data/tipsData.ts
 import { Tip } from '../types';
 
 // Sample tips data
@@ -12,7 +13,8 @@ export const tips: Tip[] = [
     confidence: 4,
     date: new Date('2025-05-15'),
     result: 'pending',
-    analysis: 'Liverpool has been in excellent form with 5 straight wins, while Manchester United has struggled defensively, conceding in their last 7 matches. Expect Liverpool\'s front three to create problems for United\'s backline.'
+    analysis: 'Liverpool has been in excellent form with 5 straight wins, while Manchester United has struggled defensively, conceding in their last 7 matches. Expect Liverpool\'s front three to create problems for United\'s backline.',
+    competition: 'English Premier League' // Added
   },
   {
     id: '2',
@@ -24,7 +26,8 @@ export const tips: Tip[] = [
     confidence: 5,
     date: new Date('2025-05-14'),
     result: 'win',
-    analysis: 'Both teams are averaging over 115 points per game in their last 10 matches. The last 5 head-to-head games have all gone over this total. With both teams at full strength, expect a high-scoring encounter.'
+    analysis: 'Both teams are averaging over 115 points per game in their last 10 matches. The last 5 head-to-head games have all gone over this total. With both teams at full strength, expect a high-scoring encounter.',
+    competition: 'NBA Playoffs' // Added
   },
   {
     id: '3',
@@ -36,7 +39,8 @@ export const tips: Tip[] = [
     confidence: 3,
     date: new Date('2025-05-16'),
     result: 'pending',
-    analysis: 'While Djokovic has been the more consistent player overall, Nadal excels on clay courts with a 92% win rate. This matchup on Nadal\'s preferred surface gives him a significant advantage despite recent form.'
+    analysis: 'While Djokovic has been the more consistent player overall, Nadal excels on clay courts with a 92% win rate. This matchup on Nadal\'s preferred surface gives him a significant advantage despite recent form.',
+    competition: 'French Open' // Added
   },
   {
     id: '4',
@@ -48,7 +52,8 @@ export const tips: Tip[] = [
     confidence: 5,
     date: new Date('2025-05-13'),
     result: 'win',
-    analysis: 'The last 8 meetings between these teams have seen both teams score. Bayern is averaging 3.1 goals per game while Dortmund is averaging 2.3 goals this season. Both teams have attacking mindsets and defensive vulnerabilities.'
+    analysis: 'The last 8 meetings between these teams have seen both teams score. Bayern is averaging 3.1 goals per game while Dortmund is averaging 2.3 goals this season. Both teams have attacking mindsets and defensive vulnerabilities.',
+    competition: 'Bundesliga' // Added
   },
   {
     id: '5',
@@ -60,7 +65,8 @@ export const tips: Tip[] = [
     confidence: 4,
     date: new Date('2025-05-12'),
     result: 'loss',
-    analysis: 'Midnight Thunder has shown excellent form in recent prep races, winning 3 of the last 4 starts. The jockey has a 22% win rate at this track, and the horse performs particularly well at this distance on dry tracks.'
+    analysis: 'Midnight Thunder has shown excellent form in recent prep races, winning 3 of the last 4 starts. The jockey has a 22% win rate at this track, and the horse performs particularly well at this distance on dry tracks.',
+    competition: 'Kentucky Derby Festival' // Added
   },
   {
     id: '6',
@@ -72,7 +78,8 @@ export const tips: Tip[] = [
     confidence: 3,
     date: new Date('2025-05-11'),
     result: 'win',
-    analysis: 'McIlroy has shot under par in the opening round of his last 6 tournaments. His driving accuracy has improved significantly, which will be crucial on this challenging course. His early tee time also provides favorable green conditions.'
+    analysis: 'McIlroy has shot under par in the opening round of his last 6 tournaments. His driving accuracy has improved significantly, which will be crucial on this challenging course. His early tee time also provides favorable green conditions.',
+    competition: 'PGA Tour - Major' // Added
   },
   {
     id: '7',
@@ -84,7 +91,8 @@ export const tips: Tip[] = [
     confidence: 3,
     date: new Date('2025-05-18'),
     result: 'pending',
-    analysis: 'Despite both fighters having knockout power, this high-stakes matchup is likely to see a cautious approach from both. Joshua has improved his defense significantly, while Wilder has shown more patience in recent fights.'
+    analysis: 'Despite both fighters having knockout power, this high-stakes matchup is likely to see a cautious approach from both. Joshua has improved his defense significantly, while Wilder has shown more patience in recent fights.',
+    competition: 'Heavyweight Championship' // Added
   },
   {
     id: '8',
@@ -96,7 +104,47 @@ export const tips: Tip[] = [
     confidence: 4,
     date: new Date('2025-05-17'),
     result: 'pending',
-    analysis: 'Australia has won 7 of the last 10 matches against England and has a superior bowling attack for the expected conditions. The pitch will favor Australia\'s pace bowlers, giving them a significant edge.'
+    analysis: 'Australia has won 7 of the last 10 matches against England and has a superior bowling attack for the expected conditions. The pitch will favor Australia\'s pace bowlers, giving them a significant edge.',
+    competition: 'ICC World Cup' // Added
+  },
+  {
+    id: '9',
+    sportId: 'football',
+    match: 'Inter Milan vs AC Milan',
+    prediction: 'Inter Milan to win',
+    odds: 2.0,
+    isPremium: true,
+    confidence: 5,
+    date: new Date('2025-05-16'),
+    result: 'pending',
+    analysis: 'Derby della Madonnina always produces intense matches. Inter is in top form, scoring consistently and with a solid defense. AC Milan has struggled in recent away games.',
+    competition: 'Serie A' // Added
+  },
+  {
+    id: '10',
+    sportId: 'football',
+    match: 'Paris Saint-Germain vs Olympique Marseille',
+    prediction: 'PSG -1.5 Handicap',
+    odds: 1.8,
+    isPremium: false,
+    confidence: 4,
+    date: new Date('2025-05-14'),
+    result: 'win',
+    analysis: 'PSG dominates Ligue 1 at home. Their attacking trio is in formidable shape, and Marseille has a poor away record against top teams.',
+    competition: 'Ligue 1' // Added
+  },
+  {
+    id: '11',
+    sportId: 'basketball',
+    match: 'Golden State Warriors vs Phoenix Suns',
+    prediction: 'Warriors to win',
+    odds: 2.2,
+    isPremium: false,
+    confidence: 3,
+    date: new Date('2025-05-15'),
+    result: 'loss',
+    analysis: 'Warriors are strong at home, but Suns have been consistently performing well. Expect a close game, but home-court advantage should play a role.',
+    competition: 'NBA Regular Season' // Added
   }
 ];
 
@@ -145,5 +193,6 @@ export const featuredTip: Tip = {
   confidence: 5,
   date: new Date(),
   result: 'pending',
-  analysis: 'Both teams are in phenomenal attacking form, with Madrid averaging 3.1 goals per game and City 2.9 goals in their last 10 matches. Defensively, both teams have conceded in 70% of their Champions League fixtures. The last 5 head-to-head matches have produced an average of 3.6 goals. With all key attacking players available for both sides, we expect an entertaining, high-scoring encounter.'
+  analysis: 'Both teams are in phenomenal attacking form, with Madrid averaging 3.1 goals per game and City 2.9 goals in their last 10 matches. Defensively, both teams have conceded in 70% of their Champions League fixtures. The last 5 head-to-head matches have produced an average of 3.6 goals. With all key attacking players available for both sides, we expect an entertaining, high-scoring encounter.',
+  competition: 'UEFA Champions League' // Added
 };
