@@ -1,3 +1,4 @@
+// project/src/components/layout/Header.tsx
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Trophy, User, Search } from 'lucide-react';
@@ -149,7 +150,7 @@ const Header = () => {
                     ))}
                   </div>
                   <Link 
-                    to="/sports"
+                    to="/sports" // Updated Link
                     className="text-sm text-blue-600 font-medium pl-2"
                   >
                     View All Sports
