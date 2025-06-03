@@ -1,3 +1,4 @@
+// project/src/components/layout/Footer.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, Mail, Phone, Instagram, Twitter, Facebook, Youtube, Calendar, Shield } from 'lucide-react';
@@ -50,7 +51,7 @@ const Footer = () => {
                 <Link to="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About Mr. Banks</Link>
+                <Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About Mr. Banks</Link> {/* Updated Link */}
               </li>
             </ul>
           </div>
@@ -71,7 +72,7 @@ const Footer = () => {
                 <Link to="/sports/horse-racing" className="text-gray-400 hover:text-white text-sm transition-colors">Horse Racing</Link>
               </li>
               <li>
-                <Link to="/sports" className="text-gray-400 hover:text-white text-sm transition-colors">View All Sports</Link>
+                <Link to="/sports" className="text-gray-400 hover:text-white text-sm transition-colors">View All Sports</Link> {/* Updated Link */}
               </li>
             </ul>
           </div>
@@ -100,8 +101,8 @@ const Footer = () => {
             © {new Date().getFullYear()} Mr. Banks Tips. All rights reserved.
           </p>
           <div className="flex space-x-6 text-xs text-gray-500">
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link> {/* Updated Link */}
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link> {/* Updated Link */}
             <div className="flex items-center">
               <Shield size={14} className="mr-1" />
               <span>Secure Payments</span>
