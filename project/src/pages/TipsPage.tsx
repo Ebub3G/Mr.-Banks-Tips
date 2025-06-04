@@ -63,6 +63,7 @@ const TipsPage = () => {
 
       <section className="py-16 bg-gray-50">
         <Container>
+         // project/src/pages/TipsPage.tsx - Correct snippet
           <div className="text-center mb-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -73,7 +74,7 @@ const TipsPage = () => {
             >
               Latest Daily Tip Bundles
             </motion.h2>
-            <motion.p
+            <motion.p  // This is the opening tag
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -81,7 +82,7 @@ const TipsPage = () => {
               className="text-gray-600 max-w-2xl mx-auto"
             >
               Each bundle represents a curated selection of tips, offering higher odds potential and expert analysis.
-            </p>
+            </motion.p> {/* This MUST be </motion.p>, which is likely line 84 in your file */}
           </div>
 
           <motion.div
