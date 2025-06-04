@@ -1,8 +1,9 @@
+// project/src/components/home/TipsList.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CalendarClock, Lock, TrendingUp, Star, ExternalLink, Sparkles } from 'lucide-react';
-import { tips } from '../../data/tipsData';
+import { tips } from '../../data/tipsData'; // Still uses individual tips
 import { formatDate, formatOdds } from '../../lib/utils';
 import Container from '../ui/Container';
 import { Card, CardContent } from '../ui/Card';
@@ -10,9 +11,9 @@ import Button from '../ui/Button';
 
 const TipsList = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  
-  const filteredTips = activeFilter === 'all' 
-    ? tips.filter(tip => !tip.isPremium) 
+
+  const filteredTips = activeFilter === 'all'
+    ? tips.filter(tip => !tip.isPremium)
     : tips.filter(tip => tip.sportId === activeFilter && !tip.isPremium);
 
   const filters = [
@@ -59,7 +60,7 @@ const TipsList = () => {
         </div>
 
         {/* Filter tabs */}
-        <motion.div 
+        <motion.div
           className="flex overflow-x-auto pb-2 mb-6 -mx-4 px-4 md:mx-0 md:px-0 md:justify-center"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +85,7 @@ const TipsList = () => {
         </motion.div>
 
         {/* Tips grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -104,9 +105,9 @@ const TipsList = () => {
                       {formatDate(tip.date)}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{tip.match}</h3>
-                  
+
                   <div className="bg-gray-50 rounded p-3 mb-4">
                     <div className="text-xs font-medium text-gray-500 mb-1">Our Prediction:</div>
                     <div className="font-semibold text-gray-900">{tip.prediction}</div>
@@ -115,16 +116,16 @@ const TipsList = () => {
                       <span>Odds: {formatOdds(tip.odds)}</span>
                     </div>
                   </div>
-                  
+
                   <div className="mt-auto">
                     <div className="flex items-center mb-3">
                       <div className="flex mr-3">
                         {[...Array(5)].map((_, i) => (
-                          <Star 
-                            key={i} 
+                          <Star
+                            key={i}
                             className={`h-4 w-4 ${
-                              i < tip.confidence 
-                                ? 'text-amber-400 fill-amber-400' 
+                              i < tip.confidence
+                                ? 'text-amber-400 fill-amber-400'
                                 : 'text-gray-300'
                             }`}
                           />
@@ -134,13 +135,13 @@ const TipsList = () => {
                         Confidence: {tip.confidence}/5
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       {tip.result ? (
                         <span className={`text-xs font-semibold px-2.5 py-0.5 rounded ${
-                          tip.result === 'win' 
-                            ? 'bg-green-100 text-green-800' 
-                            : tip.result === 'loss' 
+                          tip.result === 'win'
+                            ? 'bg-green-100 text-green-800'
+                            : tip.result === 'loss'
                             ? 'bg-red-100 text-red-800'
                             : 'bg-gray-100 text-gray-800'
                         }`}>
@@ -169,7 +170,7 @@ const TipsList = () => {
                   {/* Decorative elements */}
                   <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-amber-500/20 blur-xl"></div>
                   <div className="absolute -left-10 -bottom-10 w-32 h-32 rounded-full bg-blue-500/20 blur-xl"></div>
-                  
+
                   <div className="relative">
                     <div className="flex justify-between items-start mb-6 mt-2">
                       <span className="inline-flex items-center text-xs font-medium bg-amber-500 text-white px-3 py-1 rounded-full">
@@ -177,9 +178,9 @@ const TipsList = () => {
                         PREMIUM
                       </span>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold mb-6">Unlock our premium tips for maximum value</h3>
-                    
+
                     <div className="space-y-3 mb-8">
                       <div className="flex items-start">
                         <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
@@ -200,10 +201,10 @@ const TipsList = () => {
                         <p className="text-sm text-gray-200">Early access to weekend tips and specials</p>
                       </div>
                     </div>
-                    
+
                     <div className="mt-auto">
-                      <Button 
-                        variant="premium" 
+                      <Button
+                        variant="premium"
                         className="w-full font-semibold shadow-lg"
                       >
                         Upgrade to Premium
@@ -217,9 +218,11 @@ const TipsList = () => {
         </motion.div>
 
         <div className="text-center mt-10">
-          <Button variant="outline" size="lg">
-            View All Free Tips
-          </Button>
+          <Link to="/tips"> {/* Changed link to /tips */}
+            <Button variant="outline" size="lg">
+              View All Daily Tips
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>
