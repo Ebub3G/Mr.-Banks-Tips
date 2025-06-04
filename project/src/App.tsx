@@ -4,16 +4,16 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
-import SportPage from './pages/SportPage';
+import TipsPage from './pages/TipsPage'; // Changed from SportPage
 import BlogPage from './pages/BlogPage';
 import ResultsPage from './pages/ResultsPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
-import AboutPage from './pages/AboutPage'; // New Import
-import TermsPage from './pages/TermsPage'; // New Import
-import PrivacyPage from './pages/PrivacyPage'; // New Import
-import AllSportsPage from './pages/AllSportsPage'; // New Import
-import PremiumPage from './pages/PremiumPage'; // Existing but ensuring it's here for links
+import AboutPage from './pages/AboutPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import AllSportsPage from './pages/AllSportsPage'; // Keep AllSportsPage if you want a dedicated list of sports
+import PremiumPage from './pages/PremiumPage';
 
 function App() {
   return (
@@ -23,15 +23,17 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/sports" element={<AllSportsPage />} /> {/* New Route */}
-            <Route path="/sports/:sportName" element={<SportPage />} />
+            <Route path="/tips" element={<TipsPage />} /> {/* New Tips Route */}
+            {/* Removed the /sports/:sportName route and SportPage import */}
+            {/* You can still keep /sports to list all sports if needed, handled by AllSportsPage */}
+            <Route path="/sports" element={<AllSportsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/results" element={<ResultsPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/about" element={<AboutPage />} /> {/* New Route */}
-            <Route path="/terms" element={<TermsPage />} /> {/* New Route */}
-            <Route path="/privacy" element={<PrivacyPage />} /> {/* New Route */}
-            <Route path="/premium" element={<PremiumPage />} /> {/* Existing but good to list explicitly */}
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/premium" element={<PremiumPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
