@@ -1,7 +1,8 @@
+// project/src/pages/HomePage.tsx
 import React, { useEffect } from 'react';
 import Hero from '../components/home/Hero';
 import FeaturedTip from '../components/home/FeaturedTip';
-import SportCategories from '../components/home/SportCategories';
+// import SportCategories from '../components/home/SportCategories'; // Removed
 import TipsList from '../components/home/TipsList';
 import RecentResults from '../components/home/RecentResults';
 import Testimonials from '../components/home/Testimonials';
@@ -18,7 +19,7 @@ const HomePage = () => {
     <>
       <Hero />
       <FeaturedTip />
-      <SportCategories />
+      {/* <SportCategories /> Removed this component */}
       <TipsList />
       <RecentResults />
       <Testimonials />
