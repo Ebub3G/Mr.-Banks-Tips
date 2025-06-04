@@ -9,7 +9,6 @@ export type Sport = {
 
 export type Tip = {
   id: string;
-  sportId: string;
   match: string;
   prediction: string;
   odds: number;
@@ -18,8 +17,21 @@ export type Tip = {
   date: Date;
   result?: 'win' | 'loss' | 'pending';
   analysis: string;
-  competition: string; // Added new field
+  sportId: string;
+  competition: string;
 };
+
+// New type for a daily bundle of tips
+export type DailyTipBundle = {
+  id: string;
+  date: Date;
+  title: string; // e.g., "Mr. Banks' Daily Picks - May 22, 2025"
+  tips: Tip[]; // Array of individual tips for this bundle
+  totalOdds: number; // Calculated total odds for the bundle
+  outcome?: 'win' | 'loss' | 'pending'; // Overall outcome of the bundle
+  analysisSummary?: string; // Short summary for the bundle
+};
+
 
 export type PricingTier = {
   id: string;
