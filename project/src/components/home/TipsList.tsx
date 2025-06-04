@@ -55,7 +55,7 @@ const TipsList = () => {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our expert selections available to all users. For our highest confidence picks and detailed analysis, upgrade to premium.
-            </motion.p>
+            </p>
           </motion.div>
         </div>
 
@@ -186,19 +186,19 @@ const TipsList = () => {
                         <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
                           <Lock className="h-3 w-3" />
                         </div>
-                        <p className="text-sm text-gray-200">Access to all premium tips across all sports</motion.p>
+                        <p className="text-sm text-gray-200">Access to all premium tips across all sports</p>
                       </div>
                       <div className="flex items-start">
                         <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
                           <Lock className="h-3 w-3" />
                         </div>
-                        <p className="text-sm text-gray-200">Detailed analysis and recommended stake sizes</motion.p>
+                        <p className="text-sm text-gray-200">Detailed analysis and recommended stake sizes</p>
                       </div>
                       <div className="flex items-start">
                         <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
                           <Lock className="h-3 w-3" />
                         </div>
-                        <p className="text-sm text-gray-200">Early access to weekend tips and specials</motion.p>
+                        <p className="text-sm text-gray-200">Early access to weekend tips and specials</p>
                       </div>
                     </div>
 
