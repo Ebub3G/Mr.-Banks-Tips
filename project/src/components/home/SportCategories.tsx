@@ -1,3 +1,4 @@
+// project/src/components/home/SportCategories.tsx (No changes to this file itself)
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -26,7 +27,7 @@ const SportCategories = () => {
     <section className="py-16 bg-gray-50">
       <Container>
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +36,7 @@ const SportCategories = () => {
           >
             Betting Tips By Sport
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-gray-600 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +47,7 @@ const SportCategories = () => {
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -55,11 +56,11 @@ const SportCategories = () => {
         >
           {sports.map((sport) => {
             const SportIcon = getSportIcon(sport.icon);
-            
+
             return (
               <motion.div key={sport.id} variants={itemVariants}>
-                <Link 
-                  to={sport.route} 
+                <Link
+                  to={sport.route}
                   className="block h-full"
                 >
                   <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 text-center h-full border border-gray-100 hover:border-blue-100">
