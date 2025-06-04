@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> {/* Changed to 3 columns */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
               <Trophy size={28} className="text-amber-500 mr-2" />
@@ -34,12 +34,15 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-400 hover:text-white text-sm transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link to="/tips" className="text-gray-400 hover:text-white text-sm transition-colors">Daily Tips</Link> {/* New/Updated Link */}
               </li>
               <li>
                 <Link to="/premium" className="text-gray-400 hover:text-white text-sm transition-colors">Premium Plans</Link>
@@ -51,32 +54,17 @@ const Footer = () => {
                 <Link to="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About Mr. Banks</Link> {/* Updated Link */}
+                <Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About Mr. Banks</Link>
+              </li>
+              {/* If you want to keep All Sports Categories page */}
+              <li>
+                <Link to="/sports" className="text-gray-400 hover:text-white text-sm transition-colors">All Sports Categories</Link>
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Sports</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/sports/football" className="text-gray-400 hover:text-white text-sm transition-colors">Football</Link>
-              </li>
-              <li>
-                <Link to="/sports/basketball" className="text-gray-400 hover:text-white text-sm transition-colors">Basketball</Link>
-              </li>
-              <li>
-                <Link to="/sports/tennis" className="text-gray-400 hover:text-white text-sm transition-colors">Tennis</Link>
-              </li>
-              <li>
-                <Link to="/sports/horse-racing" className="text-gray-400 hover:text-white text-sm transition-colors">Horse Racing</Link>
-              </li>
-              <li>
-                <Link to="/sports" className="text-gray-400 hover:text-white text-sm transition-colors">View All Sports</Link> {/* Updated Link */}
-              </li>
-            </ul>
-          </div>
-          
+
+          {/* Removed the 'Sports' column */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
             <ul className="space-y-3">
@@ -95,21 +83,21 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-xs mb-4 md:mb-0">
             © {new Date().getFullYear()} Mr. Banks Tips. All rights reserved.
           </p>
           <div className="flex space-x-6 text-xs text-gray-500">
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link> {/* Updated Link */}
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link> {/* Updated Link */}
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <div className="flex items-center">
               <Shield size={14} className="mr-1" />
               <span>Secure Payments</span>
             </div>
           </div>
         </div>
-        
+
         <div className="mt-6 text-center text-xs text-gray-600">
           <p>Betting can be addictive. Please gamble responsibly.</p>
         </div>
