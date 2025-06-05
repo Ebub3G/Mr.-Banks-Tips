@@ -1,9 +1,10 @@
+// project/src/pages/ContactPage.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MessageSquare, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Clock, Send, ChevronDown } from 'lucide-react'; // Added ChevronDown import
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import { faqs } from '../data/pricingData';
+import { faqs } from '../data/faqsData'; // UPDATED IMPORT PATH HERE
 
 const ContactPage = () => {
   React.useEffect(() => {
@@ -15,7 +16,7 @@ const ContactPage = () => {
       <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-16">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h1 
+            <motion.h1
               className="text-3xl md:text-4xl font-bold text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,7 +46,7 @@ const ContactPage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-              
+
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -59,7 +60,7 @@ const ContactPage = () => {
                       placeholder="Your name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       Email
@@ -72,7 +73,7 @@ const ContactPage = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Subject
@@ -84,7 +85,7 @@ const ContactPage = () => {
                     placeholder="How can we help you?"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
@@ -96,7 +97,7 @@ const ContactPage = () => {
                     placeholder="Tell us how we can assist you..."
                   ></textarea>
                 </div>
-                
+
                 <div>
                   <Button variant="primary" className="w-full sm:w-auto">
                     <Send className="mr-2 h-4 w-4" />
@@ -105,14 +106,14 @@ const ContactPage = () => {
                 </div>
               </form>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
-              
+
               <div className="bg-gray-50 rounded-lg p-6 shadow-sm border border-gray-100 mb-6">
                 <ul className="space-y-4">
                   <li className="flex">
@@ -126,7 +127,7 @@ const ContactPage = () => {
                       <p className="text-gray-600">support@mrbankstips.com</p>
                     </div>
                   </li>
-                  
+
                   <li className="flex">
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-10 w-10 rounded-md bg-blue-700 text-white">
@@ -138,7 +139,7 @@ const ContactPage = () => {
                       <p className="text-gray-600">+1 (888) 555-TIPS</p>
                     </div>
                   </li>
-                  
+
                   <li className="flex">
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-10 w-10 rounded-md bg-blue-700 text-white">
@@ -150,7 +151,7 @@ const ContactPage = () => {
                       <p className="text-gray-600">Available on the bottom right corner</p>
                     </div>
                   </li>
-                  
+
                   <li className="flex">
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-10 w-10 rounded-md bg-blue-700 text-white">
@@ -164,15 +165,15 @@ const ContactPage = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <h3 className="text-lg font-medium text-blue-900 mb-3">Premium Support</h3>
+                <h3 className="text-lg font-medium text-blue-900 mb-3">Priority Support</h3>
                 <p className="text-blue-800 text-sm mb-4">
-                  Premium members receive priority support with dedicated response times under 2 hours.
-                </p>
-                <Button variant="premium" size="sm">
-                  Upgrade to Premium
-                </Button>
+                  For faster assistance, please ensure your query includes all relevant details.
+                </p> {/* Changed text */}
+                <Button variant="primary" size="sm"> {/* Changed variant */}
+                  Send us a message
+                </Button> {/* Changed text */}
               </div>
             </motion.div>
           </div>
@@ -183,7 +184,7 @@ const ContactPage = () => {
       <section className="py-16 bg-gray-50">
         <Container>
           <div className="text-center mb-12">
-            <motion.h2 
+            <motion.h2
               className="text-3xl font-bold text-gray-900 mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +193,7 @@ const ContactPage = () => {
             >
               Frequently Asked Questions
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-gray-600 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
