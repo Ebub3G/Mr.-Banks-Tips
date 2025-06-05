@@ -12,7 +12,7 @@ export type Tip = {
   match: string;
   prediction: string;
   odds: number;
-  isPremium: boolean;
+  // isPremium: boolean; // Removed
   confidence: number; // 1-5
   date: Date;
   result?: 'win' | 'loss' | 'pending';
@@ -32,15 +32,15 @@ export type DailyTipBundle = {
   analysisSummary?: string; // Short summary for the bundle
 };
 
-
-export type PricingTier = {
-  id: string;
-  name: string;
-  price: number;
-  duration: string;
-  features: string[];
-  recommended?: boolean;
-};
+// PricingTier type removed as it's no longer used
+// export type PricingTier = {
+//   id: string;
+//   name: string;
+//   price: number;
+//   duration: string;
+//   features: string[];
+//   recommended?: boolean;
+// };
 
 export type Testimonial = {
   id: string;
