@@ -44,9 +44,10 @@ const Footer = () => {
               <li>
                 <Link to="/tips" className="text-gray-400 hover:text-white text-sm transition-colors">Daily Tips</Link> {/* New/Updated Link */}
               </li>
-              <li>
+              {/* Removed Premium Plans link */}
+              {/* <li>
                 <Link to="/premium" className="text-gray-400 hover:text-white text-sm transition-colors">Premium Plans</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/results" className="text-gray-400 hover:text-white text-sm transition-colors">Results & Records</Link>
               </li>
