@@ -52,18 +52,18 @@ const TipsPage = () => {
             <p className="text-blue-100 text-lg">
               Get Mr. Banks' top picks across all sports, compiled into powerful daily bundles for maximum value.
             </p>
-            <div className="mt-8">
+            {/* Removed premium button from hero */}
+            {/* <div className="mt-8">
               <Link to="/premium">
                 <Button variant="premium" size="lg">Unlock All Daily Tips</Button>
               </Link>
-            </div>
+            </div> */}
           </motion.div>
         </Container>
       </section>
 
       <section className="py-16 bg-gray-50">
         <Container>
-         // project/src/pages/TipsPage.tsx - Correct snippet
           <div className="text-center mb-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const TipsPage = () => {
             >
               Latest Daily Tip Bundles
             </motion.h2>
-            <motion.p  // This is the opening tag
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -82,7 +82,7 @@ const TipsPage = () => {
               className="text-gray-600 max-w-2xl mx-auto"
             >
               Each bundle represents a curated selection of tips, offering higher odds potential and expert analysis.
-            </motion.p> {/* This MUST be </motion.p>, which is likely line 84 in your file */}
+            </motion.p>
           </div>
 
           <motion.div
@@ -94,7 +94,7 @@ const TipsPage = () => {
           >
             {sortedBundles.map((bundle) => (
               <motion.div key={bundle.id} variants={itemVariants}>
-                <Card className="h-full flex flex-col">
+                <Card className="h-full flex flex-col"> {/* Removed isPremium prop */}
                   <CardHeader className="bg-blue-50 border-b border-blue-100">
                     <div className="flex justify-between items-center mb-2">
                       <h3 className="text-xl font-bold text-gray-900">{bundle.title}</h3>
@@ -140,20 +140,22 @@ const TipsPage = () => {
                         PENDING
                       </span>
                     )}
-                    <Button variant="link" size="sm" className="text-blue-600">
-                      View Bundle Analysis <Sparkles className="ml-1 h-3 w-3" />
-                    </Button>
+                    <Link to="/tips"> {/* Link to itself for now, or could be individual bundle page */}
+                      <Button variant="link" size="sm" className="text-blue-600">
+                        View Bundle Analysis <Sparkles className="ml-1 h-3 w-3" />
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               </motion.div>
             ))}
 
-            {/* Premium Upsell Card */}
+            {/* Removed Premium Upsell Card */}
+            {/*
             <motion.div variants={itemVariants}>
               <Card className="h-full bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-hidden border-0">
                 <CardContent className="p-0 h-full">
                   <div className="p-5 flex flex-col h-full relative overflow-hidden">
-                    {/* Decorative elements */}
                     <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-amber-500/20 blur-xl"></div>
                     <div className="absolute -left-10 -bottom-10 w-32 h-32 rounded-full bg-blue-500/20 blur-xl"></div>
 
@@ -203,6 +205,7 @@ const TipsPage = () => {
                 </CardContent>
               </Card>
             </motion.div>
+            */}
           </motion.div>
         </Container>
       </section>
