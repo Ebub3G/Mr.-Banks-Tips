@@ -12,9 +12,10 @@ import Button from '../ui/Button';
 const TipsList = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
+  // Removed .filter(tip => !tip.isPremium)
   const filteredTips = activeFilter === 'all'
-    ? tips.filter(tip => !tip.isPremium)
-    : tips.filter(tip => tip.sportId === activeFilter && !tip.isPremium);
+    ? tips
+    : tips.filter(tip => tip.sportId === activeFilter);
 
   const filters = [
     { id: 'all', label: 'All Tips' },
@@ -54,8 +55,8 @@ const TipsList = () => {
               Today's Free Tips
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our expert selections available to all users. For our highest confidence picks and detailed analysis, upgrade to premium.
-            </p>
+              Our expert selections available to all users.
+            </p> {/* Changed text */}
           </motion.div>
         </div>
 
@@ -94,7 +95,7 @@ const TipsList = () => {
         >
           {filteredTips.map((tip) => (
             <motion.div key={tip.id} variants={itemVariants}>
-              <Card className="h-full flex flex-col">
+              <Card className="h-full flex flex-col"> {/* Removed isPremium prop */}
                 <CardContent className="p-5 flex flex-col h-full">
                   <div className="flex justify-between items-start mb-3">
                     <span className="inline-flex items-center text-xs font-medium text-blue-800 bg-blue-100 px-2.5 py-0.5 rounded-full">
@@ -162,12 +163,12 @@ const TipsList = () => {
             </motion.div>
           ))}
 
-          {/* Premium tip teaser card */}
+          {/* Removed Premium tip teaser card */}
+          {/*
           <motion.div variants={itemVariants}>
             <Card className="h-full bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-hidden border-0">
               <CardContent className="p-0 h-full">
                 <div className="p-5 flex flex-col h-full relative overflow-hidden">
-                  {/* Decorative elements */}
                   <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-amber-500/20 blur-xl"></div>
                   <div className="absolute -left-10 -bottom-10 w-32 h-32 rounded-full bg-blue-500/20 blur-xl"></div>
 
@@ -215,6 +216,7 @@ const TipsList = () => {
               </CardContent>
             </Card>
           </motion.div>
+          */}
         </motion.div>
 
         <div className="text-center mt-10">
