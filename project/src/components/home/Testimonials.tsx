@@ -1,7 +1,8 @@
+// project/src/components/home/Testimonials.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import { testimonials } from '../../data/pricingData';
+import { testimonials } from '../../data/testimonialsData'; // Updated import path
 import Container from '../ui/Container';
 
 const Testimonials = () => {
@@ -26,7 +27,7 @@ const Testimonials = () => {
     <section className="py-16 bg-blue-900">
       <Container>
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +36,7 @@ const Testimonials = () => {
           >
             Trusted by Thousands of Bettors
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-blue-200 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +47,7 @@ const Testimonials = () => {
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -54,8 +55,8 @@ const Testimonials = () => {
           viewport={{ once: true }}
         >
           {testimonials.map((testimonial) => (
-            <motion.div 
-              key={testimonial.id} 
+            <motion.div
+              key={testimonial.id}
               variants={itemVariants}
               className="bg-white rounded-lg p-6 shadow-md relative"
             >
@@ -63,25 +64,25 @@ const Testimonials = () => {
               <div className="absolute -top-3 -left-3 bg-amber-500 rounded-full p-2 shadow-md">
                 <Quote className="h-4 w-4 text-white" />
               </div>
-              
+
               {/* Rating stars */}
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
+                  <Star
+                    key={i}
                     className={`h-4 w-4 ${
-                      i < testimonial.rating 
-                        ? 'text-amber-400 fill-amber-400' 
+                      i < testimonial.rating
+                        ? 'text-amber-400 fill-amber-400'
                         : 'text-gray-300'
                     }`}
                   />
                 ))}
               </div>
-              
+
               <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
-              
+
               <div className="flex items-center">
-                <img 
+                <img
                   src={testimonial.image}
                   alt={`${testimonial.name} avatar`}
                   className="w-10 h-10 rounded-full object-cover mr-3"
