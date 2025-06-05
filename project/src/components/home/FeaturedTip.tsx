@@ -1,3 +1,4 @@
+// project/src/components/home/FeaturedTip.tsx
 import React from 'react';
 import { CalendarClock, TrendingUp, BarChart3, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -6,6 +7,7 @@ import { featuredTip } from '../../data/tipsData';
 import Container from '../ui/Container';
 import { Card, CardHeader, CardContent, CardFooter } from '../ui/Card';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom'; // Import Link
 
 const FeaturedTip = () => {
   return (
@@ -18,12 +20,12 @@ const FeaturedTip = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="bg-amber-100 text-amber-800 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-3 inline-block">
-              Today's Featured Tip
+            <span className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-3 inline-block"> {/* Changed color from amber */}
+              Today's Top Pick
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Premium Expert Pick
-            </h2>
+              Expert Selection of the Day
+            </h2> {/* Changed text */}
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our most confident selection of the day, carefully analyzed by our expert team.
             </p>
@@ -36,7 +38,7 @@ const FeaturedTip = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Card isPremium className="max-w-4xl mx-auto overflow-hidden">
+          <Card className="max-w-4xl mx-auto overflow-hidden"> {/* Removed isPremium prop */}
             <CardHeader className="bg-gradient-to-r from-blue-800 to-blue-900 text-white">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
@@ -53,7 +55,7 @@ const FeaturedTip = () => {
                     <TrendingUp className="h-3.5 w-3.5 mr-1" />
                     {featuredTip.odds.toFixed(2)} Odds
                   </span>
-                  <span className="bg-amber-500 rounded-full px-3 py-1 text-sm font-semibold inline-flex items-center">
+                  <span className="bg-blue-500 rounded-full px-3 py-1 text-sm font-semibold inline-flex items-center"> {/* Changed color from amber */}
                     <BarChart3 className="h-3.5 w-3.5 mr-1" />
                     {featuredTip.confidence}/5 Confidence
                   </span>
@@ -71,7 +73,7 @@ const FeaturedTip = () => {
               
               <div>
                 <div className="flex items-center mb-3">
-                  <Award className="h-5 w-5 text-amber-500 mr-2" />
+                  <Award className="h-5 w-5 text-blue-500 mr-2" /> {/* Changed color from amber */}
                   <h5 className="text-lg font-semibold text-gray-900">Expert Analysis</h5>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
@@ -82,11 +84,13 @@ const FeaturedTip = () => {
             
             <CardFooter className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-500">
-                <span className="font-medium">Premium members:</span> Get detailed stake advice and in-play recommendations
+                Get detailed analysis and in-play recommendations with all our tips. {/* Changed text */}
               </div>
-              <Button variant="premium">
-                Unlock Premium Tips
-              </Button>
+              <Link to="/tips"> {/* Changed link */}
+                <Button variant="primary"> {/* Changed variant */}
+                  View All Daily Tips
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </motion.div>
