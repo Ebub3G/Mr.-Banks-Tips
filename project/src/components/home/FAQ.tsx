@@ -1,7 +1,8 @@
+// project/src/components/home/FAQ.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { faqs } from '../../data/pricingData';
+import { faqs } from '../../data/faqsData'; // Updated import path
 import Container from '../ui/Container';
 
 const FAQItem = ({ question, answer }) => {
@@ -38,7 +39,7 @@ const FAQ = () => {
     <section className="py-16 bg-white">
       <Container>
         <div className="max-w-3xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +54,7 @@ const FAQ = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="bg-white rounded-xl shadow-md overflow-hidden divide-y divide-gray-200"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +68,7 @@ const FAQ = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="mt-10 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -77,8 +78,8 @@ const FAQ = () => {
             <p className="text-gray-600 mb-4">
               Still have questions? We're here to help.
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center"
             >
               Contact our support team
