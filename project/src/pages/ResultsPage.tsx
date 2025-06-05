@@ -1,10 +1,12 @@
+// project/src/pages/ResultsPage.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Clock, Calendar, Filter, ChevronDown, Search, Check, X } from 'lucide-react';
+import { TrendingUp, Clock, Calendar, Filter, ChevronDown, Search, Check, X, Star } from 'lucide-react'; // Added Star
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import { tips } from '../data/tipsData';
 import { formatDate, calculateSuccessRate } from '../lib/utils';
+import { Link } from 'react-router-dom'; // Import Link
 
 const ResultsPage = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -294,11 +296,12 @@ const ResultsPage = () => {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {tip.prediction}
-                        {tip.isPremium && (
+                        {/* Removed isPremium tag */}
+                        {/* {tip.isPremium && (
                           <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">
                             Premium
                           </span>
-                        )}
+                        )} */}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                         {tip.odds.toFixed(2)}
@@ -410,7 +413,7 @@ const ResultsPage = () => {
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                <span className="text-gray-700">All historical tips remain accessible to members for verification</span>
+                <span className="text-700">All historical tips remain accessible to members for verification</span>
               </li>
             </ul>
           </div>
