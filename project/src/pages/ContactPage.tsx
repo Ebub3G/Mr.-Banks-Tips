@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, Clock, Send, ChevronDown } from 'lucide-react'; // Added ChevronDown import
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import { faqs } from '../data/faqsData'; // UPDATED IMPORT PATH HERE
+import { faqs } from '../data/faqsData'; // THIS IS THE CRUCIAL UPDATED IMPORT PATH
 
 const ContactPage = () => {
   React.useEffect(() => {
@@ -170,10 +170,10 @@ const ContactPage = () => {
                 <h3 className="text-lg font-medium text-blue-900 mb-3">Priority Support</h3>
                 <p className="text-blue-800 text-sm mb-4">
                   For faster assistance, please ensure your query includes all relevant details.
-                </p> {/* Changed text */}
-                <Button variant="primary" size="sm"> {/* Changed variant */}
+                </p>
+                <Button variant="primary" size="sm">
                   Send us a message
-                </Button> {/* Changed text */}
+                </Button>
               </div>
             </motion.div>
           </div>
