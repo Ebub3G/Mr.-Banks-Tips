@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, Clock, Send, ChevronDown } from 'lucide-react'; // Added ChevronDown import
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import { faqs } from '../data/faqsData'; // THIS IS THE CRUCIAL UPDATED IMPORT PATH
+import { faqs } from '../data/faqsData';  // THIS IS THE CRUCIAL UPDATED IMPORT PATH
 
 const ContactPage = () => {
   React.useEffect(() => {
