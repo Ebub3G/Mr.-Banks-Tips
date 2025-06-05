@@ -1,8 +1,10 @@
+// project/src/components/home/CTASection.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, CheckCircle } from 'lucide-react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom'; // Import Link
 
 const CTASection = () => {
   return (
@@ -25,16 +27,20 @@ const CTASection = () => {
             </h2>
             
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              Join Mr. Banks' community of successful bettors and get access to expert predictions, detailed analysis, and personalized advice.
-            </p>
+              Join Mr. Banks' community of smart bettors and get access to expert predictions, detailed analysis, and personalized advice.
+            </p> {/* Changed text */}
             
             <div className="flex flex-wrap justify-center gap-4 mt-4">
-              <Button variant="premium" size="lg" className="font-semibold">
-                Start Winning Today <ChevronRight className="ml-1 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 font-semibold hover:bg-white/20">
-                View Free Tips
-              </Button>
+              <Link to="/tips"> {/* Changed link */}
+                <Button variant="primary" size="lg" className="font-semibold"> {/* Changed variant */}
+                  Start Winning Today <ChevronRight className="ml-1 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/tips"> {/* Changed link */}
+                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 font-semibold hover:bg-white/20">
+                  View Daily Tips {/* Changed text */}
+                </Button>
+              </Link>
             </div>
             
             <div className="pt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -57,8 +63,8 @@ const CTASection = () => {
               <div className="flex items-start">
                 <CheckCircle className="text-green-400 mr-2 h-5 w-5 flex-shrink-0 mt-0.5" />
                 <div className="text-left">
-                  <p className="text-white font-medium">7-Day Guarantee</p>
-                  <p className="text-blue-200 text-sm">Risk-free trial period</p>
+                  <p className="text-white font-medium">Transparent Records</p> {/* Changed text */}
+                  <p className="text-blue-200 text-sm">Verify our claimed success rates</p> {/* Changed text */}
                 </div>
               </div>
             </div>
