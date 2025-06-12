@@ -58,7 +58,7 @@ const AllSportsPage = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Access our most confident selections and detailed analysis by upgrading to a premium membership.
+              Access our most confident selections and detailed analysis.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -66,9 +66,9 @@ const AllSportsPage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Link to="/premium">
-                <Button variant="premium" size="lg">
-                  Unlock Premium Tips Now
+              <Link to="/tips">
+                <Button variant="primary" size="lg">
+                  View Today's Tips
                 </Button>
               </Link>
             </motion.div>
