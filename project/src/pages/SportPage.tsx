@@ -98,7 +98,7 @@ const SportPage = () => {
             <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
               Results
             </Button>
-            <Link to="/tips"> {/* Updated Link */}
+            <Link to="/tips">
               <Button variant="primary">
                 View All {sport.name} Tips
               </Button>
@@ -198,7 +198,6 @@ const SportPage = () => {
                 </motion.div>
               ))}
 
-              {/* Removed Premium upsell card */}
             </>
           ) : (
             <div className="text-center py-16">
@@ -208,7 +207,7 @@ const SportPage = () => {
               <p className="text-gray-600 mb-6">
                 Check back soon for our latest {sport.name.toLowerCase()} predictions.
               </p>
-              <Link to="/sports"> {/* Added Link */}
+              <Link to="/sports">
                 <Button variant="outline">
                   Browse Other Sports
                 </Button>
@@ -217,7 +216,7 @@ const SportPage = () => {
           )}
 
           <div className="flex justify-center mt-8">
-            <Link to="/results"> {/* Added Link */}
+            <Link to="/results">
               <Button variant="outline" size="lg">
                 View All {sport.name} Tips <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
