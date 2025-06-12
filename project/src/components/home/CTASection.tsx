@@ -36,11 +36,6 @@ const CTASection = () => {
                   Start Winning Today <ChevronRight className="ml-1 h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/tips"> {/* Changed link */}
-                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 font-semibold hover:bg-white/20">
-                  View Daily Tips {/* Changed text */}
-                </Button>
-              </Link>
             </div>
             
             <div className="pt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
