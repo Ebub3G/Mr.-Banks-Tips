@@ -35,9 +35,9 @@ const AboutPage = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/premium">
-                  <Button variant="premium" size="lg" className="font-semibold text-base">
-                    Join Our Community
+                <Link to="/tips">
+                  <Button variant="primary" size="lg" className="font-semibold text-base">
+                    View Daily Tips
                   </Button>
                 </Link>
                 <Link to="/contact">
