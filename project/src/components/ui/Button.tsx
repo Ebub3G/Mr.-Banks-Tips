@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 
 type ButtonProps = {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link'; // 'premium' removed
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link'; 
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   fullWidth?: boolean;
@@ -26,7 +26,6 @@ const Button = ({
     outline: 'border border-gray-300 bg-transparent hover:bg-gray-100 focus-visible:ring-gray-500',
     ghost: 'bg-transparent hover:bg-gray-100 focus-visible:ring-gray-500',
     link: 'bg-transparent underline-offset-4 hover:underline text-blue-600 hover:text-blue-700 p-0 h-auto focus-visible:ring-transparent',
-    // premium: 'bg-gradient-to-r from-amber-500 to-amber-600 text-white hover:from-amber-600 hover:to-amber-700 focus-visible:ring-amber-500', // Removed
   };
 
   const sizes = {
