@@ -88,7 +88,7 @@ const TipsPage = () => {
           >
             {sortedBundles.map((bundle) => (
               <motion.div key={bundle.id} variants={itemVariants}>
-                <Card className="h-full flex flex-col"> {/* Removed isPremium prop */}
+                <Card className="h-full flex flex-col">
                   <CardHeader className="bg-blue-50 border-b border-blue-100">
                     <div className="flex justify-between items-center mb-2">
                       <h3 className="text-xl font-bold text-gray-900">{bundle.title}</h3>
@@ -134,7 +134,7 @@ const TipsPage = () => {
                         PENDING
                       </span>
                     )}
-                    <Link to="/tips"> {/* Link to itself for now, or could be individual bundle page */}
+                    <Link to="/tips">
                       <Button variant="link" size="sm" className="text-blue-600">
                         View Bundle Analysis <Sparkles className="ml-1 h-3 w-3" />
                       </Button>
