@@ -23,7 +23,6 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/tips" element={<TipsPage />} /> {/* New Tips Route */}
-            {/* Removed the /sports/:sportName route and SportPage import */}
             {/* You can still keep /sports to list all sports if needed, handled by AllSportsPage */}
             <Route path="/sports" element={<AllSportsPage />} />
             <Route path="/blog" element={<BlogPage />} />
