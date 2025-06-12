@@ -98,9 +98,9 @@ const SportPage = () => {
             <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
               Results
             </Button>
-            <Link to="/premium"> {/* Added Link */}
-              <Button variant="premium">
-                Premium {sport.name} Tips
+            <Link to="/tips"> {/* Updated Link */}
+              <Button variant="primary">
+                View All {sport.name} Tips
               </Button>
             </Link>
           </div>
@@ -140,7 +140,7 @@ const SportPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 + compIndex * 0.1 + tipIndex * 0.05, duration: 0.5 }}
                       >
-                        <Card isPremium={tip.isPremium}>
+                        <Card>
                           <CardContent className="p-5">
                             <div className="mb-4">
                               <div className="flex justify-between items-start mb-2">
@@ -171,20 +171,11 @@ const SportPage = () => {
                               </div>
                             </div>
 
-                            {tip.isPremium ? (
-                              <div className="bg-amber-50 border border-amber-100 rounded-md p-3 mb-4">
-                                <p className="text-sm text-gray-800">
-                                  <span className="font-semibold text-amber-800">Premium Analysis: </span>
-                                  Detailed insights and betting strategy available for premium members.
-                                </p>
-                              </div>
-                            ) : (
-                              <div className="mb-4">
-                                <p className="text-sm text-gray-700 line-clamp-3">
-                                  {tip.analysis}
-                                </p>
-                              </div>
-                            )}
+                            <div className="mb-4">
+                              <p className="text-sm text-gray-700 line-clamp-3">
+                                {tip.analysis}
+                              </p>
+                            </div>
 
                             <div className="flex justify-between items-center">
                               <div className="flex">
@@ -207,43 +198,7 @@ const SportPage = () => {
                 </motion.div>
               ))}
 
-              {/* Premium upsell card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.5 }}
-                className="mt-8"
-              >
-                <Card className="bg-blue-900 text-white h-full border-0">
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <h3 className="text-xl font-bold mb-4">Get Premium {sport.name} Tips</h3>
-                    <p className="text-blue-100 mb-6">
-                      Unlock our highest confidence {sport.name.toLowerCase()} predictions with detailed analysis and expert insights.
-                    </p>
-                    <ul className="space-y-3 mb-8">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-blue-50">Early access to weekend picks</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-blue-50">Detailed analysis and statistics</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-blue-50">Recommended stake sizing</span>
-                      </li>
-                    </ul>
-                    <div className="mt-auto">
-                      <Link to="/premium"> {/* Added Link */}
-                        <Button variant="premium" fullWidth>
-                          Upgrade Now <ChevronRight className="ml-1 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              {/* Removed Premium upsell card */}
             </>
           ) : (
             <div className="text-center py-16">
