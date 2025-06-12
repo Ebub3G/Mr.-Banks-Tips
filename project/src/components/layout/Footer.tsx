@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> {/* Changed to 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
               <Trophy size={28} className="text-amber-500 mr-2" />
@@ -42,7 +42,7 @@ const Footer = () => {
                 <Link to="/" className="text-gray-400 hover:text-white text-sm transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/tips" className="text-gray-400 hover:text-white text-sm transition-colors">Daily Tips</Link> {/* New/Updated Link */}
+                <Link to="/tips" className="text-gray-400 hover:text-white text-sm transition-colors">Daily Tips</Link>
               </li>
               <li>
                 <Link to="/results" className="text-gray-400 hover:text-white text-sm transition-colors">Results & Records</Link>
@@ -59,8 +59,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Removed the 'Sports' column */}
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
