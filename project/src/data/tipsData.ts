@@ -9,7 +9,6 @@ export const tips: Tip[] = [
     match: 'Manchester United vs Liverpool',
     prediction: 'Liverpool to win',
     odds: 2.1,
-    // isPremium: false, // Removed
     confidence: 4,
     date: new Date('2025-05-15'),
     result: 'pending',
@@ -22,7 +21,6 @@ export const tips: Tip[] = [
     match: 'Los Angeles Lakers vs Boston Celtics',
     prediction: 'Over 220.5 Points',
     odds: 1.9,
-    // isPremium: true, // Removed
     confidence: 5,
     date: new Date('2025-05-14'),
     result: 'win',
@@ -35,7 +33,6 @@ export const tips: Tip[] = [
     match: 'Novak Djokovic vs Rafael Nadal',
     prediction: 'Nadal to win',
     odds: 2.3,
-    // isPremium: true, // Removed
     confidence: 3,
     date: new Date('2025-05-16'),
     result: 'pending',
@@ -48,7 +45,6 @@ export const tips: Tip[] = [
     match: 'Bayern Munich vs Borussia Dortmund',
     prediction: 'Both Teams to Score',
     odds: 1.75,
-    // isPremium: false, // Removed
     confidence: 5,
     date: new Date('2025-05-13'),
     result: 'win',
@@ -61,7 +57,6 @@ export const tips: Tip[] = [
     match: 'Kentucky Derby - Race 4',
     prediction: 'Midnight Thunder to Win',
     odds: 4.5,
-    // isPremium: true, // Removed
     confidence: 4,
     date: new Date('2025-05-12'),
     result: 'loss',
@@ -74,7 +69,6 @@ export const tips: Tip[] = [
     match: 'US Open - Round 1',
     prediction: 'Rory McIlroy to shoot under par',
     odds: 1.85,
-    // isPremium: false, // Removed
     confidence: 3,
     date: new Date('2025-05-11'),
     result: 'win',
@@ -87,7 +81,6 @@ export const tips: Tip[] = [
     match: 'Joshua vs Wilder',
     prediction: 'Fight to go over 7.1 rounds',
     odds: 2.1,
-    // isPremium: true, // Removed
     confidence: 3,
     date: new Date('2025-05-18'),
     result: 'pending',
@@ -100,7 +93,6 @@ export const tips: Tip[] = [
     match: 'England vs Australia',
     prediction: 'Australia to win',
     odds: 1.9,
-    // isPremium: false, // Removed
     confidence: 4,
     date: new Date('2025-05-17'),
     result: 'pending',
@@ -113,7 +105,6 @@ export const tips: Tip[] = [
     match: 'Inter Milan vs AC Milan',
     prediction: 'Inter Milan to win',
     odds: 2.0,
-    // isPremium: true, // Removed
     confidence: 5,
     date: new Date('2025-05-16'),
     result: 'pending',
@@ -126,7 +117,6 @@ export const tips: Tip[] = [
     match: 'Paris Saint-Germain vs Olympique Marseille',
     prediction: 'PSG -1.5 Handicap',
     odds: 1.8,
-    // isPremium: false, // Removed
     confidence: 4,
     date: new Date('2025-05-14'),
     result: 'win',
@@ -139,7 +129,6 @@ export const tips: Tip[] = [
     match: 'Golden State Warriors vs Phoenix Suns',
     prediction: 'Warriors to win',
     odds: 2.2,
-    // isPremium: false, // Removed
     confidence: 3,
     date: new Date('2025-05-15'),
     result: 'loss',
@@ -189,7 +178,6 @@ export const featuredTip: Tip = {
   match: 'Real Madrid vs Manchester City',
   prediction: 'Over 2.5 Goals & Both Teams to Score',
   odds: 2.0,
-  // isPremium: true, // Removed
   confidence: 5,
   date: new Date(),
   result: 'pending',
