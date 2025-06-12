@@ -5,25 +5,17 @@ import { cn } from '../../lib/utils';
 type CardProps = {
   children: React.ReactNode;
   className?: string;
-  // isPremium?: boolean; // Removed
 };
 
-const Card = ({ children, className }: CardProps) => { // Removed isPremium = false
+const Card = ({ children, className }: CardProps) => { 
   return (
     <div
       className={cn(
         'rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg',
-        // isPremium ? 'border border-amber-400 bg-gradient-to-br from-amber-50 to-white' : 'bg-white', // Removed conditional styling
         'bg-white', // Default to white background
         className
       )}
     >
-      {/* Removed premium banner */}
-      {/* {isPremium && (
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-3 py-1 text-center">
-          PREMIUM TIP
-        </div>
-      )} */}
       {children}
     </div>
   );
