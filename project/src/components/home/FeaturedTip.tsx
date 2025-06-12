@@ -20,12 +20,12 @@ const FeaturedTip = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-3 inline-block"> {/* Changed color from amber */}
+            <span className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-3 inline-block">
               Today's Top Pick
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Expert Selection of the Day
-            </h2> {/* Changed text */}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our most confident selection of the day, carefully analyzed by our expert team.
             </p>
@@ -38,7 +38,7 @@ const FeaturedTip = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Card className="max-w-4xl mx-auto overflow-hidden"> {/* Removed isPremium prop */}
+          <Card className="max-w-4xl mx-auto overflow-hidden">
             <CardHeader className="bg-gradient-to-r from-blue-800 to-blue-900 text-white">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
@@ -55,14 +55,14 @@ const FeaturedTip = () => {
                     <TrendingUp className="h-3.5 w-3.5 mr-1" />
                     {featuredTip.odds.toFixed(2)} Odds
                   </span>
-                  <span className="bg-blue-500 rounded-full px-3 py-1 text-sm font-semibold inline-flex items-center"> {/* Changed color from amber */}
+                  <span className="bg-blue-500 rounded-full px-3 py-1 text-sm font-semibold inline-flex items-center">
                     <BarChart3 className="h-3.5 w-3.5 mr-1" />
                     {featuredTip.confidence}/5 Confidence
                   </span>
                 </div>
               </div>
             </CardHeader>
-            
+
             <CardContent className="py-6">
               <div className="mb-6">
                 <div className="inline-block bg-blue-50 text-blue-800 px-3 py-1 rounded-md font-medium mb-3">
@@ -70,10 +70,10 @@ const FeaturedTip = () => {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">{featuredTip.prediction}</h4>
               </div>
-              
+
               <div>
                 <div className="flex items-center mb-3">
-                  <Award className="h-5 w-5 text-blue-500 mr-2" /> {/* Changed color from amber */}
+                  <Award className="h-5 w-5 text-blue-500 mr-2" />
                   <h5 className="text-lg font-semibold text-gray-900">Expert Analysis</h5>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
@@ -81,13 +81,13 @@ const FeaturedTip = () => {
                 </p>
               </div>
             </CardContent>
-            
+
             <CardFooter className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-500">
-                Get detailed analysis and in-play recommendations with all our tips. {/* Changed text */}
+                Get detailed analysis and in-play recommendations with all our tips.
               </div>
-              <Link to="/tips"> {/* Changed link */}
-                <Button variant="primary"> {/* Changed variant */}
+              <Link to="/tips">
+                <Button variant="primary">
                   View All Daily Tips
                 </Button>
               </Link>
