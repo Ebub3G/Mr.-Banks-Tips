@@ -13,7 +13,6 @@ import AboutPage from './pages/AboutPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import AllSportsPage from './pages/AllSportsPage'; // Keep AllSportsPage if you want a dedicated list of sports
-// import PremiumPage from './pages/PremiumPage'; // Removed
 
 function App() {
   return (
@@ -33,8 +32,6 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
-            {/* Removed PremiumPage route */}
-            {/* <Route path="/premium" element={<PremiumPage />} /> */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
