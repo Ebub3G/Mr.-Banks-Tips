@@ -12,7 +12,6 @@ import Button from '../ui/Button';
 const TipsList = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  // Removed .filter(tip => !tip.isPremium)
   const filteredTips = activeFilter === 'all'
     ? tips
     : tips.filter(tip => tip.sportId === activeFilter);
@@ -56,7 +55,7 @@ const TipsList = () => {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our expert selections available to all users.
-            </p> {/* Changed text */}
+            </p>
           </motion.div>
         </div>
 
@@ -95,7 +94,7 @@ const TipsList = () => {
         >
           {filteredTips.map((tip) => (
             <motion.div key={tip.id} variants={itemVariants}>
-              <Card className="h-full flex flex-col"> {/* Removed isPremium prop */}
+              <Card className="h-full flex flex-col">
                 <CardContent className="p-5 flex flex-col h-full">
                   <div className="flex justify-between items-start mb-3">
                     <span className="inline-flex items-center text-xs font-medium text-blue-800 bg-blue-100 px-2.5 py-0.5 rounded-full">
@@ -113,7 +112,7 @@ const TipsList = () => {
                     <div className="text-xs font-medium text-gray-500 mb-1">Our Prediction:</div>
                     <div className="font-semibold text-gray-900">{tip.prediction}</div>
                     <div className="flex items-center mt-2 text-gray-700 text-sm">
-                      <TrendingUp className="h-4 w-4 mr-1 text-green-600" />
+                      <TrendingUp className="h-4 w-4 mr-1" />
                       <span>Odds: {formatOdds(tip.odds)}</span>
                     </div>
                   </div>
@@ -165,7 +164,7 @@ const TipsList = () => {
         </motion.div>
 
         <div className="text-center mt-10">
-          <Link to="/tips"> {/* Changed link to /tips */}
+          <Link to="/tips">
             <Button variant="outline" size="lg">
               View All Daily Tips
             </Button>
