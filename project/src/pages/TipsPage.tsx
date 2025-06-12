@@ -52,12 +52,6 @@ const TipsPage = () => {
             <p className="text-blue-100 text-lg">
               Get Mr. Banks' top picks across all sports, compiled into powerful daily bundles for maximum value.
             </p>
-            {/* Removed premium button from hero */}
-            {/* <div className="mt-8">
-              <Link to="/premium">
-                <Button variant="premium" size="lg">Unlock All Daily Tips</Button>
-              </Link>
-            </div> */}
           </motion.div>
         </Container>
       </section>
@@ -149,63 +143,6 @@ const TipsPage = () => {
                 </Card>
               </motion.div>
             ))}
-
-            {/* Removed Premium Upsell Card */}
-            {/*
-            <motion.div variants={itemVariants}>
-              <Card className="h-full bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-hidden border-0">
-                <CardContent className="p-0 h-full">
-                  <div className="p-5 flex flex-col h-full relative overflow-hidden">
-                    <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-amber-500/20 blur-xl"></div>
-                    <div className="absolute -left-10 -bottom-10 w-32 h-32 rounded-full bg-blue-500/20 blur-xl"></div>
-
-                    <div className="relative">
-                      <div className="flex justify-between items-start mb-6 mt-2">
-                        <span className="inline-flex items-center text-xs font-medium bg-amber-500 text-white px-3 py-1 rounded-full">
-                          <Sparkles className="mr-1 h-3 w-3" />
-                          PREMIUM ACCESS
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-bold mb-6">Unlock all premium daily tip bundles</h3>
-
-                      <div className="space-y-3 mb-8">
-                        <div className="flex items-start">
-                          <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
-                            <CheckCircle className="h-3 w-3" />
-                          </div>
-                          <p className="text-sm text-gray-200">Access to all high-confidence daily bundles</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
-                            <CheckCircle className="h-3 w-3" />
-                          </div>
-                          <p className="text-sm text-gray-200">Detailed analysis for every pick in a bundle</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
-                            <CheckCircle className="h-3 w-3" />
-                          </div>
-                          <p className="text-sm text-gray-200">Early access and exclusive members-only content</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-auto">
-                        <Link to="/premium">
-                          <Button
-                            variant="premium"
-                            className="w-full font-semibold shadow-lg"
-                          >
-                            Upgrade to Premium
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-            */}
           </motion.div>
         </Container>
       </section>
