@@ -144,7 +144,7 @@ const TipsList = () => {
                             ? 'bg-green-100 text-green-800'
                             : tip.result === 'loss'
                             ? 'bg-red-100 text-red-800'
-                            : 'bg-gray-100 text-gray-800'
+                            : 'bg-blue-100 text-blue-800'
                         }`}>
                           {tip.result.toUpperCase()}
                         </span>
@@ -162,61 +162,6 @@ const TipsList = () => {
               </Card>
             </motion.div>
           ))}
-
-          {/* Removed Premium tip teaser card */}
-          {/*
-          <motion.div variants={itemVariants}>
-            <Card className="h-full bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-hidden border-0">
-              <CardContent className="p-0 h-full">
-                <div className="p-5 flex flex-col h-full relative overflow-hidden">
-                  <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-amber-500/20 blur-xl"></div>
-                  <div className="absolute -left-10 -bottom-10 w-32 h-32 rounded-full bg-blue-500/20 blur-xl"></div>
-
-                  <div className="relative">
-                    <div className="flex justify-between items-start mb-6 mt-2">
-                      <span className="inline-flex items-center text-xs font-medium bg-amber-500 text-white px-3 py-1 rounded-full">
-                        <Sparkles className="mr-1 h-3 w-3" />
-                        PREMIUM
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-bold mb-6">Unlock our premium tips for maximum value</h3>
-
-                    <div className="space-y-3 mb-8">
-                      <div className="flex items-start">
-                        <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
-                          <Lock className="h-3 w-3" />
-                        </div>
-                        <p className="text-sm text-gray-200">Access to all premium tips across all sports</p>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
-                          <Lock className="h-3 w-3" />
-                        </div>
-                        <p className="text-sm text-gray-200">Detailed analysis and recommended stake sizes</p>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="bg-white/10 p-1 rounded-full mr-3 mt-0.5">
-                          <Lock className="h-3 w-3" />
-                        </div>
-                        <p className="text-sm text-gray-200">Early access to weekend tips and specials</p>
-                      </div>
-                    </div>
-
-                    <div className="mt-auto">
-                      <Button
-                        variant="premium"
-                        className="w-full font-semibold shadow-lg"
-                      >
-                        Upgrade to Premium
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-          */}
         </motion.div>
 
         <div className="text-center mt-10">
